@@ -1,0 +1,104 @@
+page {
+  height: 100%;
+  background-image: linear-gradient(66deg, #f0f5db 20%, #cbf1f1 100%);
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+}
+
+.rcontainer {
+  margin:105rpx 10rpx 10rpx 100rpx;
+  width:540rpx;
+  height:785rpx;
+  padding:0;
+}
+
+.result {
+  width: 540rpx;
+  height: 140rpx;
+  margin: 10rpx 0rpx 40rpx;
+  display: flex;
+  background: white;
+  border-radius: 30rpx;
+  box-shadow: 20rpx 20rpx 60rpx #90A4AE;
+}
+
+.blackb {
+  width: 15rpx;
+  height: 95rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  background: #798089;
+}
+
+.blueb {
+  width: 15rpx;
+  height: 95rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  background: #426BBA;
+}
+
+.redb {
+  width: 15rpx;
+  height: 95rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  background: #B83847;
+}
+
+.greenb {
+  width: 15rpx;
+  height: 95rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  background: #1A7971;
+}
+
+.wname {
+  width: 240rpx;
+  padding: 38rpx 20rpx 20rpx 40rpx;
+  font-family: Microsoft YaHei;
+  font-size: 45rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.blue, .colorblock {
+  width: 120rpx;
+  height: 120rpx;
+  background: url("https://lumos.oss-cn-shenzhen.aliyuncs.com/r-icon.png") no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+
+.red, .colorblock {
+  width: 120rpx;
+  height: 120rpx;
+  background: url("https://lumos.oss-cn-shenzhen.aliyuncs.com/h-icon.png") no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+
+.green, .colorblock {
+  width: 120rpx;
+  height: 120rpx;
+  background: url("https://lumos.oss-cn-shenzhen.aliyuncs.com/k-icon.png") no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+
+.black, .colorblockr {
+  width: 120rpx;
+  height: 120rpx;
+  background: url("https://lumos.oss-cn-shenzhen.aliyuncs.com/o-icon.png") no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}

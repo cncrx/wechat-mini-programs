@@ -1,0 +1,40 @@
+<wxs module="Math" src="Math.wxs"></wxs>
+<!-->用法：Math.getRound
+<-->
+  <view class="add-days-count-down" style="display: flex; flex-direction: column;">
+
+    <view style="display: flex;">
+      <input placeholder="倒计日名称" bindinput="bindCddText" class="add-dcd-input" value="{{ cddTextValue }}"></input>
+      <picker mode="date" value="{{ date }}" start="{{ date }}" bindchange="bindCountDownDate" style="margin-left: 20rpx;">
+        <button>日期</button>
+      </picker>
+    </view>
+
+    <button bindtap="addCDD" disabled="{{ cddText=='' }}" style="width: 500rpx; margin-top: 20rpx;">添加</button>
+
+  </view>
+
+
+  <view class="content-days-count-down">
+
+    <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+      <image class="bg-logo" src="../../images/planner.png" style="height: 350rpx;"></image>
+      <view class="title">倒计天数</view>
+      <text class="color-block" style="background: #9ca8b8;"></text>
+
+      <view wx:if="{{ !cddList.length }}" style="margin-left: 60rpx; margin-top: 20rpx; color: #9B9B9B">
+        暂无添加的倒计天数
+      </view>
+
+      <view class="list">
+        <view wx:for="{{ cddList }}" wx:key="key" class="list-item">
+          <text>{{item.text}}</text>
+          <text class="show-left" style="font-size:32rpx;font-weight: bold;">{{ (Math.getRound(item.ts, currTimestamp)) }}</text>
+          <text style="font-size:32rpx;">天 </text>
+          <text data-elem-index="{{ index }}" bindtap="delCDD" style="color: salmon;"> x</text>
+        </view>
+      </view>
+
+    </view>
+
+  </view>

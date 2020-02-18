@@ -1,0 +1,29 @@
+<view class='add-todo' style='display: flex;'>
+
+  <input placeholder="待办项" bindinput="bindTODOText" value='{{ todoElemValue }}' class='add-todo-input'></input>
+  <button bindtap="addTODO" disabled="{{ todoElem=='' }}" class='add-todo-btn'>添加</button>
+
+</view>
+
+
+<view class="content-todo">
+
+  <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+    <image class="bg-logo" src="../../images/to-do-list.png" style="height: 350rpx;"></image>
+    <view class="title">待办事项</view>
+    <text class="color-block" style="background: #ffcb47;"></text>
+
+    <view wx:if="{{ !todoList.length }}" style="margin-left: 60rpx; margin-top: 20rpx; color: #9B9B9B">
+      暂无添加的待办事项
+    </view>
+
+    <view class="list">
+      <view wx:for="{{ todoList }}" wx:key="key" class="list-item">
+        <text>{{ item }}</text>
+        <!-- <button data-elem-index="{{ index }}" bindtap="delTODO">x</button> -->
+        <image src="../../images/check-2x.png" data-elem-index="{{ index }}" bindtap="delTODO"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

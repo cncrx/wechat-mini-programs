@@ -1,0 +1,4 @@
+var getRound = function (cdd, curr) {
+  return Math.round((cdd - curr) / 60 / 60 / 24)
+}
+module.exports.getRound = getRound;

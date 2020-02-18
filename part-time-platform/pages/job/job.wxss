@@ -1,0 +1,34 @@
+.container-job-detail {
+  padding: 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-top: 30rpx;
+}
+
+.row-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-name {
+  margin-bottom: 30rpx;
+  font-size: 60rpx;
+}
+
+.job-salary {
+  color: salmon;
+}
+
+.job-detail-heading {
+  margin-bottom: 30rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.job-detail {
+  font-size: 36rpx;
+  line-height: 60rpx;
+}

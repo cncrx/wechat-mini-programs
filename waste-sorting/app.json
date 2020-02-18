@@ -1,0 +1,39 @@
+{
+
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/result/result"
+  ],
+
+  "tabBar": {
+    "list": [
+      {
+        "text": "搜索",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/s.png",
+        "selectedIconPath": "images/s-selected.png"
+      },
+      {
+        "text": "历史",
+        "pagePath": "pages/history/history",
+        "iconPath": "images/h.png",
+        "selectedIconPath": "images/h-selected.png"
+      }
+    ],
+    "color": "#424242",
+    "selectedColor": "#424242"
+  },
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "今日份垃圾小分类",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

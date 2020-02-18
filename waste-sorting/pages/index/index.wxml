@@ -1,0 +1,28 @@
+<view class="container">
+  <!--
+  <i-input value="" type="text" right title="垃圾名" mode="wrapped" placeholder="" bindinput="input" />
+  <i-button type="primary" i-class="button" shape="circle" size="large" bind:click="handleClick"><i-icon type="search"/></i-button> 
+  -->
+  <view class='search'>
+    <view style='position: absolute;'>
+      <text class='heading'>搜索</text>
+      <view class='colorblock'></view>
+    </view>
+
+    <view style='position: absolute;'>
+      <button class='btn1' catchtap='handleClick'>
+        <i-icon type="search" size="22" />
+      </button>
+    </view>
+
+    <input bindinput="input" value="{{ inputValue }}" class="input" confirm-type="search" bindconfirm='handleClick'></input>
+  </view>
+
+  <view class='tips'><text style='font-size:30px;'>“</text>{{ tips }}<text style='font-size:30px;'>”</text></view>
+
+</view>
+
+
+
+
+<i-toast id="toast" />

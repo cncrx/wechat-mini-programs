@@ -1,0 +1,7 @@
+.container-job-list {
+  margin-top: 40rpx;
+}
+
+.container-paging {
+  margin: 40rpx 10rpx;
+}

@@ -1,0 +1,71 @@
+page {
+  height: 100%;
+  border: 1px solid transparent;
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+}
+
+.container {
+  margin:120rpx 10rpx 10rpx 100rpx;
+  padding-top:50rpx;
+  width:540rpx;
+  height:745rpx;
+  background:white;
+  border-radius:30rpx 10rpx;
+  box-shadow: 20rpx 20rpx 60rpx #a5d6a7;
+}
+
+.heading {
+  margin-left: -235rpx;
+  font-family: "Microsoft JhengHei";
+  font-size: 100rpx;
+}
+
+.colorblock {
+  width: 230rpx;
+  height: 25rpx;
+  margin-left: -235rpx;
+  margin-top: -40rpx;
+  background: #9ccc65;
+  border-radius: 30rpx;
+}
+
+.itemlist {
+  display: inline-block;
+  width: 220rpx;
+}
+
+.scroll {
+  margin: 160rpx 10rpx 0rpx;
+  width: 450rpx;
+  height: 470rpx;
+  line-height: 90rpx;
+}
+
+.records {
+  font-family: "Microsoft YaHei";
+  font-size: 32rpx;
+}
+
+.deleteicon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 175rpx;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty .title {
+  margin-bottom:130rpx;
+  font-size:45rpx;
+  color: #9B9B9B;
+}
+
+
+/**
+#B2EBF2
+**/

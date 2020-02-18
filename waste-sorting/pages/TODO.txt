@@ -1,0 +1,16 @@
+鉴别输入框是否为空 .
+错误提示（拦截）. 
+历史搜索记录 .
+背景图 .
+小贴士 .
+历史记录去重 .
+示例
+分享
+MORE
+
+有害：https://i.loli.net/2019/08/06/dOpksg8bSXTRQo9.png
+厨余：https://i.loli.net/2019/08/06/EPxN5ezDl8CfWIQ.png
+其它：https://i.loli.net/2019/08/06/JWGtckqK2zEZumV.png
+可回收：https://i.loli.net/2019/08/06/QmKPXU6sbpyzFWo.png
+
+99CCCC

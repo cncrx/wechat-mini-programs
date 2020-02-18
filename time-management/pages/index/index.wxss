@@ -1,0 +1,86 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  /* #e8ecf1浅蓝灰; #e4e9ed浅黑灰; #dadfe1黑灰*/
+  width: 650rpx;
+  height: 350rpx;
+  margin: 30rpx 50rpx 70rpx 50rpx;
+  box-shadow: 25rpx 30rpx 50rpx 10rpx #dadfe1;
+  border-radius: 50rpx 10rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 5rpx;
+}
+
+.bg-logo {
+  width: 400rpx;
+  height: 400rpx;
+  position: absolute;
+  margin-top: -150rpx;
+  margin-left: 420rpx;
+  clip: rect(155rpx 230rpx 400rpx 0rpx);
+}
+
+.title {
+  margin: 30rpx 20rpx 0 60rpx;
+  font-family: "Microsoft JhengHei";
+  font-size: 70rpx;
+  z-index: 1;
+}
+
+.color-block {
+  width: 330rpx;
+  height: 25rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  margin-top: 80rpx;
+  margin-left: 55rpx;
+}
+
+.cd-content {
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.cd-time {
+  font-size: 52rpx;
+  padding-bottom: 45rpx;
+}
+
+.btn image {
+  margin-bottom: 15rpx;
+}
+
+.list {
+  padding-top: 80rpx;
+
+}
+
+.list-item {
+  padding: 40rpx 0rpx 10rpx 60rpx;
+  font-size: 40rpx;
+}
+
+.list-item text:first-child {
+  display: inline-block;
+  width: 380rpx;
+}
+
+.list-item image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 60rpx;
+}
+
+.show-left {
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 250rpx;
+}

@@ -1,0 +1,30 @@
+<view class="container-job-detail">
+
+  <view class='row row-1'>
+    <text class='job-name'>> {{ jobDetail.JobName }}</text>
+    <text style='font-size: 38rpx'>{{ jobDetail.JobLoc }}</text>
+  </view>
+
+  <view class='row row-2' style='font-size: 38rpx'>
+    <text class='job-salary'>{{ jobDetail.JobSalary }} 元</text>
+    <text> - </text>
+    <text>{{ jobDetail.JobWorkTime }}</text>
+  </view>
+
+  <view class='row row-3'>
+    <view class='job-detail-heading'>工作描述：</view>
+    <text class='job-detail'>{{ jobDetail.JobDetail }}</text>
+  </view>
+
+  <view class='row row-4'>
+
+    <i-button bind:click="companyDetail" type="ghost" inline="true" data-company-id="{{ jobDetail.BelongtoCompany }}">
+      <i-icon type="businesscard" size="22" color="#80848f" />公司详情</i-button>
+    <i-button bind:click="farvoriteJob" type="ghost" inline="true" data-job-id="{{ jobDetail.id }}">
+      <i-icon type="collection" size="22" color="#80848f" />收藏岗位</i-button>
+    <i-button bind:click="applyJob" type="primary" inline="true">应聘申请</i-button>
+  </view>
+
+</view>
+
+<i-toast id="toast" />

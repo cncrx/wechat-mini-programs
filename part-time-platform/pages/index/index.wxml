@@ -1,0 +1,27 @@
+<view class="container-main">
+  <view class="container-loading" wx:if="{{ loading }}">
+    <i-spin fix></i-spin>
+  </view>
+
+  <view class='container-job-list' wx:for='{{ jobsListPage }}' wx:key='item' data-job-id='{{ item.id }}' catchtap='jumpToDetail'>
+    <i-card title="> {{ item.JobName }}">
+      <view slot="content">{{ item.JobCity }}</view>
+      <view slot="content">{{ item.JobLoc }}</view>
+      <view slot="content">{{ item.JobSalary }}</view>
+      <view slot="content">{{ item.JobWorkTime }}</view>
+    </i-card>
+  </view>
+
+  <view class='container-paging' style='margin-top: 40rpx;'>
+    <i-page current="{{ current }}" total="{{ page }}" bind:change="changePage">
+      <view slot="prev">
+        <i-icon type="return"></i-icon>
+        上一页
+      </view>
+      <view slot="next">
+        下一页
+        <i-icon type="enter"></i-icon>
+      </view>
+    </i-page>
+  </view>
+</view>

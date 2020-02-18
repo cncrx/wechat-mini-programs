@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-card": "../../iview-ui/dist/card/index",
+    "i-page": "../../iview-ui/dist/page/index",
+    "i-icon": "../../iview-ui/dist/icon/index",
+    "i-spin": "../../iview-ui/dist/spin/index"
+  }
+}

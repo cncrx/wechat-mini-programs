@@ -1,0 +1,109 @@
+<wxs module="Math" src="Math.wxs"></wxs>
+<!-->用法：Math.getRound
+<-->
+
+  <view class="content-timing">
+
+    <view class="main" wx:if="{{ toggleCD }}">
+      <image class="bg-logo" src="/images/tomato-tp.jpg" bindtap="toggleCD"></image>
+      <view class="title" bindtap="toggleCD">番茄时钟</view>
+      <text class="color-block" style="background: #FF6666;"></text>
+      <view style="color: #9B9B9B;margin-left: 60rpx;" wx:if="{{ toggleTip }}">点击标题可切换计时类型</view>
+      <view class="cd-content">
+        <view class="cd-time">
+          <text>{{ TCDState }} </text>
+          <text>{{ (minutes<10?"0"+minutes:minutes) + ":" + (seconds<10?"0"+seconds:seconds) }}</text>
+        </view>
+        <view class="btn" bindtap="tomatoCountDown">
+          <image src="{{ CDRunning?'../../images/stopCD.png':'../../images/startCD-tp.png' }}" style="width: 128rpx; height: 128rpx;"></image>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="main" wx:if="{{ !toggleCD }}">
+      <image class="bg-logo" src="/images/clock-tp.jpg" style="height: 350rpx;" bindtap="toggleCD"></image>
+      <view class="title" bindtap="toggleCD">普通计时</view>
+      <text class="color-block" style="background: #c6dad8;"></text>
+      <view class="cd-content">
+        <view class="cd-time">
+          <picker mode="time" value="{{time}}" start="00" end="59" bindchange="bindPickerTimeChange">
+            <!-- <button>当前选择: {{time}}</button> -->
+            <text> 专注 </text>
+            <text>{{ (nminutes<10? "0"+nminutes:nminutes) + ":" + (nseconds<10? "0"+nseconds:nseconds) }}</text>
+          </picker>
+        </view>
+        <view class="btn" bindtap="normalCountDown">
+          <image src="{{ CDRunning?'../../images/stopCD.png':'../../images/startCD-tp.png' }}" style="width: 128rpx; height: 128rpx;"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="content-todo">
+
+    <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+      <image class="bg-logo" src="/images/to-do-list.png" style="height: 350rpx;"></image>
+      <view class="title" data-page="todo" bindtap="jumpToPage">待办事项</view> <text class="color-block" style="background: #ffcb47;"></text>
+
+      <view wx:if="{{ !todoList.length }}" style="width: 350rpx; margin-left: 50rpx; margin-top: 20rpx; color: #9B9B9B">
+        暂无待办事项，点击标题可进入相应页面
+      </view>
+
+      <view class="list">
+        <view wx:for="{{ todoList }}" wx:key="key" class="list-item">
+          <text>{{ item }}</text>
+          <!-- <button data-elem-index="{{ index }}" bindtap="delTODO">x</button> -->
+          <image src="../../images/check-2x.png" data-elem-index="{{ index }}" bindtap="delTODO"></image>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+  <view class="content-days-count-down">
+
+    <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+      <image class="bg-logo" src="/images/planner.png" style="height: 350rpx;"></image>
+      <view class="title" data-page="countdown" bindtap="jumpToPage">倒计天数</view> <text class="color-block" style="background: #9ca8b8;"></text>
+      
+      <view wx:if="{{ !cddList.length }}" style="width: 350rpx; margin-left: 50rpx; margin-top: 20rpx; color: #9B9B9B">
+        暂无倒计天数，点击标题可进入相应页面
+      </view>
+
+      <view class="list">
+        <view wx:for="{{ cddList }}" wx:key="key" class="list-item">
+        <text style='width: 180rpx;'>{{item.text}}</text>
+        <text class="show-left" style="font-size:32rpx;font-weight: bold;">{{ (Math.getRound(item.ts, currTimestamp)) }}</text>
+        <text style="font-size:32rpx;">天</text>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="content-bk">
+
+  <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+    <image class="bg-logo" src="../../images/notes@4x.png" style="height: 350rpx;"></image>
+    <view class="title" data-page="bookkeeping" bindtap="jumpToPage">生活记账</view>
+    <text class="color-block" style="background: #91d2d4;"></text>
+
+    <view wx:if="{{ !bkList.length }}" style="margin-left: 60rpx; margin-top: 20rpx; color: #9B9B9B">
+      暂无添加的记账事项
+    </view>
+
+    <view class="list">
+      <view wx:for="{{ bkList }}" wx:key="key" class="list-item">
+        <text style='width: 430rpx;'>{{ item[0] }} - {{ item[1] }} 元</text>
+        <text data-elem-index="{{ index }}" bindtap="delBK" style="color: salmon;"> x</text>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,25 @@
+.container-company-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-1 {
+  display: flex;
+}
+
+.company-avatar {
+  width: 350rpx;
+  margin: 50rpx;
+  box-shadow: 15rpx 15rpx 60rpx 10rpx #dce1da;
+}
+
+.row-2 {
+  margin: 50rpx;
+  font-size: 42rpx;
+}
+
+.row-3 {
+  margin: 50rpx;
+  line-height: 60rpx;
+  font-size: 38rpx;
+}

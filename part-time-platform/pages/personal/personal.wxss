@@ -1,0 +1,19 @@
+.login-button {
+  margin: 400rpx 100rpx;
+  padding: 5rpx;
+  border: 1px solid #04be02;
+  background-color: white;
+}
+
+.welcome {
+  margin: 400rpx auto 50rpx;
+  font-size: 48rpx;
+  text-align: center;
+}
+
+.logout-button {
+  margin: auto 100rpx;
+  padding: 5rpx;
+  border: 1px solid black;
+  background-color: white;
+}

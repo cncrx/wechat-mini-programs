@@ -1,0 +1,15 @@
+<view class='rcontainer'>
+
+  <view wx:for="{{wasteList}}" class='result'>
+    <view class="{{ ((item.type==='gan')?'blackb':((item.type==='shi')?'greenb':((item.type==='youhai')?'redb':'blueb'))) }}"></view>
+    <text  class='wname'>{{ item.name }}</text>
+    
+    <text class="{{ ((item.type==='gan')?'black':((item.type==='shi')?'green':((item.type==='youhai')?'red':'blue'))) }}">
+    
+  </text>
+    
+    
+
+  </view>
+
+</view>

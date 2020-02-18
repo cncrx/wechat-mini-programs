@@ -1,0 +1,12 @@
+
+<button class="login-button" wx:if="{{ !logged }}" open-type="getUserInfo" bindgetuserinfo="login">
+  <i-icon type="mine" size='26' color="#04BE02" /> 微信登录/注册 </button>
+
+<block wx:else>
+  <view class="welcome">欢迎登录，{{ wechatNickName }}</view>
+  <button class="logout-button" catchtap="logout">
+  <i-icon type="undo" size='26' color="#333" /> 注销 </button>
+</block>
+
+
+<i-toast id="toast" />

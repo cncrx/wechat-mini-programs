@@ -1,0 +1,27 @@
+<view class='container'>
+
+  <view class='search'>
+    <view style='position: absolute;'>
+      <text class='heading'>历史</text>
+      <view class='colorblock'></view>
+    </view>
+  </view>
+
+<block wx:if="{{ historyList.length }}">
+  <scroll-view scroll-y class='scroll'>
+    <view wx:for="{{ historyList }}" wx:key="index">
+      <view class='itemlist' data-wname='{{ item }}' catchtap='jumpToResult'>
+        <text class='records'>{{ item }}</text>
+      </view>
+      <image src="../../images/delete.png" class='deleteicon' catchtap="deleteHistory" data-index="{{ index }}"></image>
+    </view>
+  </scroll-view>
+</block>
+
+<block wx:else>
+  <view class="empty">
+      <text class="title">暂无历史搜索记录</text>
+    </view>
+</block>
+
+</view>

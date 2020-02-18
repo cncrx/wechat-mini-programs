@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/todo/todo",
+    "pages/countdown/countdown",
+    "pages/bookkeeping/bookkeeping"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "时间管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home-o.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "待办事项",
+        "iconPath": "images/todo-list-o.png",
+        "selectedIconPath": "images/todo-list-selected.png"
+      },
+      {
+        "pagePath": "pages/countdown/countdown",
+        "text": "倒计天数",
+        "iconPath": "images/calender-o.png",
+        "selectedIconPath": "images/calender-selected.png"
+      },
+      {
+        "pagePath": "pages/bookkeeping/bookkeeping",
+        "text": "生活记账",
+        "iconPath": "images/bookkeeping-o.png",
+        "selectedIconPath": "images/bookkeeping-selected.png"
+      }],
+      "color": "#353b48",
+      "selectedColor": "#353b48"
+  },
+  "sitemapLocation": "sitemap.json"
+}

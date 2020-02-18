@@ -1,0 +1,24 @@
+<view class='container-company-detail'>
+
+  <view class='row row-1'>
+    <image src='{{ avatarSrc }}' class='company-avatar'></image>
+    <view style='display:flex; flex-direction: column; margin: 50rpx; font-size: 48rpx;'>
+      <text style='padding-bottom:100rpx;'>{{ companyDetail.Companyname }}</text>
+      <text>{{ companyDetail.City }}</text>
+    </view>
+  </view>
+
+  <view class='row row-2'>
+    <view>{{ companyDetail.Address }}</view>
+  </view>
+
+  <view class='row row-3'>
+    <view style='font-weight: bold;'>公司简介：</view>
+    <view>{{ companyDetail.Intro }}</view>
+  </view>
+
+  <view class='row row-4'>
+    <i-button bind:click="goBack" type="primary" size="small">返回</i-button>
+  </view>
+
+</view>

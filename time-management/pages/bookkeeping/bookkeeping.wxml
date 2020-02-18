@@ -1,0 +1,30 @@
+<view class='add-bk-text' style='display: flex;'>
+  <input type='text' placeholder="记账名称" bindinput="bindBKText" value='{{ bkTextElemValue }}' class='add-bk-input' style="width: 90%; margin-bottom: 30rpx;"></input>
+</view>
+
+<view class='add-bk-cost' style='display: flex;'>
+  <input type='number' placeholder="金额" bindinput="bindBKCost" value='{{ bkCostElemValue }}' class='add-bk-input'></input>
+  <button bindtap="addBK" disabled="{{ bkTextElem ==  '' && bkCostElem ==  '' }}">添加</button>
+</view>
+
+
+<view class="content-bk">
+
+  <view class="main" style="height: calc(50%); padding-bottom:50rpx;">
+    <image class="bg-logo" src="../../images/notes@4x.png" style="height: 350rpx;"></image>
+    <view class="title">生活记账</view>
+    <text class="color-block" style="background: #91d2d4;"></text>
+
+    <view wx:if="{{ !bkList.length }}" style="margin-left: 60rpx; margin-top: 20rpx; color: #9B9B9B">
+      暂无添加的记账事项
+    </view>
+
+    <view class="list">
+      <view wx:for="{{ bkList }}" wx:key="key" class="list-item">
+        <text style='width: 430rpx;'>{{ item[0] }} - {{ item[1] }} 元</text>
+        <text data-elem-index="{{ index }}" bindtap="delBK" style="color: salmon;"> x</text>
+      </view>
+    </view>
+
+  </view>
+</view>
