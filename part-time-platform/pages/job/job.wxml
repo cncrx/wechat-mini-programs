@@ -1,7 +1,7 @@
 <view class="container-job-detail">
 
   <view class='row row-1'>
-    <text class='job-name'>> {{ jobDetail.JobName }}</text>
+    <text class='job-name'>- {{ jobDetail.JobName }}</text>
     <text style='font-size: 38rpx'>{{ jobDetail.JobLoc }}</text>
   </view>
 
@@ -19,10 +19,11 @@
   <view class='row row-4'>
 
     <i-button bind:click="companyDetail" type="ghost" inline="true" data-company-id="{{ jobDetail.BelongtoCompany }}">
-      <i-icon type="businesscard" size="22" color="#80848f" />公司详情</i-button>
+      公司详情</i-button>
     <i-button bind:click="farvoriteJob" type="ghost" inline="true" data-job-id="{{ jobDetail.id }}">
-      <i-icon type="collection" size="22" color="#80848f" />收藏岗位</i-button>
+      收藏岗位</i-button>
     <i-button bind:click="applyJob" type="primary" inline="true">应聘申请</i-button>
+    <i-button bind:click="goBack" type="ghost" shape="circle" size="small">返回</i-button>
   </view>
 
 </view>

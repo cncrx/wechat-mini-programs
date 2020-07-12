@@ -1,12 +1,55 @@
-
 <button class="login-button" wx:if="{{ !logged }}" open-type="getUserInfo" bindgetuserinfo="login">
   <i-icon type="mine" size='26' color="#04BE02" /> 微信登录/注册 </button>
 
 <block wx:else>
-  <view class="welcome">欢迎登录，{{ wechatNickName }}</view>
-  <button class="logout-button" catchtap="logout">
-  <i-icon type="undo" size='26' color="#333" /> 注销 </button>
+  <view style="display: flex;">
+    <view class="list-title">
+      <view class="color-block" style="background: #6c7a89"></view>
+      <view class="list-title-text">欢迎登录，{{ wechatNickName }}</view>
+    </view>
+
+    <button class="logout-button" catchtap="logout">
+      <i-icon type="undo" size='26' color="#333" /> 注销 </button>
+  </view>
+
+  <i-divider></i-divider>
+
+  <view class="jobs-list">
+    <view class="list-title">
+      <view class="color-block"></view>
+      <view class="list-title-text">已申请岗位</view>
+    </view>
+
+    <view class="list-jobs-item" wx:for="{{ jobsApplyList }}" wx:key="item">
+      <view style="margin: auto 0">{{ item.JobName }}</view>
+      <button style="margin-right: -20rpx;" catchtap='jumpToDetail' data-job-id='{{ item.BelongtoJob }}'>
+        <i-icon type="search" size="22" />
+      </button>
+    </view>
+  </view>
+
+  <view class="jobs-list">
+    <view class="list-title ">
+      <view class="color-block " style="background: #e9d460; "></view>
+      <view class="list-title-text ">已收藏岗位</view>
+    </view>
+
+    <view class="list-jobs-item" wx:for="{{ jobsFavList }}" wx:key="item">
+      <view style="margin: auto 0">{{ item.JobName }}</view>
+      <button style="margin-right: -20rpx;" catchtap='jumpToDetail'  data-job-id='{{ item.BelongtoJob }}'>
+        <i-icon type="search" size="22" />
+      </button>
+    </view>
+  </view>
+
 </block>
 
 
+
 <i-toast id="toast" />
+<!--
+
+<button class="logout-button " catchtap="logout ">
+  <i-icon type="undo " size='26' color="#333 " /> 注销 </button>
+  
+  <view class="welcome ">欢迎登录，{{ wechatNickName }}</view>>

@@ -18,7 +18,7 @@
   </view>
 
   <view class='row row-4'>
-    <i-button bind:click="goBack" type="primary" size="small">返回</i-button>
+    <i-button bind:click="goBack" type="ghost" shape="circle" size="small">返回</i-button>
   </view>
 
 </view>

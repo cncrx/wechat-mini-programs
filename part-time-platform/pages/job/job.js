@@ -68,7 +68,7 @@ Page({
               content: '收藏失败',
               type: 'warning'
             });
-          } else if (res.statusCode === 201) {
+          } else if (res.statusCode === 201 || res.statusCode === 200) {
             $Toast({
               content: '收藏成功',
               type: 'success'
@@ -102,7 +102,7 @@ Page({
               content: '应聘提交失败',
               type: 'warning'
             })
-          } else if (res.statusCode === 201) {
+          } else if (res.statusCode === 201 || res.statusCode === 200) {
             $Toast({
               content: '应聘提交成功',
               type: 'success'
@@ -111,5 +111,11 @@ Page({
         }
       })
     }
+  },
+  
+  goBack() {
+    wx.navigateBack({
+      delta: 1
+    })
   }
 })

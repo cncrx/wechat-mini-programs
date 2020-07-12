@@ -5,15 +5,31 @@
   background-color: white;
 }
 
-.welcome {
-  margin: 400rpx auto 50rpx;
-  font-size: 48rpx;
-  text-align: center;
+.logout-button {
+  width: 220rpx;
+  margin-top: 20rpx;
+  margin-left: 100rpx;
+  border: 1px solid #6c7a89;
+  background-color: white;
 }
 
-.logout-button {
-  margin: auto 100rpx;
-  padding: 5rpx;
-  border: 1px solid black;
-  background-color: white;
+.list-title {
+  display: flex;
+}
+
+.color-block {
+  width: 15rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  background: #426BBA;
+}
+
+.list-title-text {
+  padding: 38rpx 20rpx 20rpx 40rpx;
+  font-size: 36rpx;
+}
+
+.list-jobs-item {
+  display: flex;
+  padding: 15rpx 60rpx;
 }

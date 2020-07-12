@@ -17,7 +17,7 @@ Page({
         console.log(res.data)
         that.setData({
           companyDetail: res.data,
-          avatarSrc: baseUrl + 'avatar?id=' + companyId
+          avatarSrc: 'http://120.79.85.160:80/pt/avatar?id=' + companyId // 图片通过转发的话会乱码
         })
       }
     })

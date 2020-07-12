@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "i-toast": "../../iview-ui/dist/toast/index",
-    "i-icon": "../../iview-ui/dist/icon/index"
+    "i-icon": "../../iview-ui/dist/icon/index",
+    "i-divider": "../../iview-ui/dist/divider/index"
   }
 }
